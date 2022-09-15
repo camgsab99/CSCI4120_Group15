@@ -1,5 +1,9 @@
+# Created by: Cameron Sabiston and Nick Terrell
+# Created on: 09/15/2022
+
 import math
 import random
+from turtle import color
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
@@ -7,56 +11,61 @@ from sklearn import metrics
 from sklearn.neighbors import KNeighborsClassifier
 
 
-def loadDataset(filename, split):
-    trainingSet = []
-    testSet = []
-    df = pd.read_csv(filename, header=None)
+# Loads the dataset and splits it into training and test sets
+def load_dataset(file_name, split):
+    training_set = []
+    test_set = []
+    df = pd.read_csv(file_name, header=None)
     array = df.to_numpy()
     random.shuffle(array)
     training_len = int(len(array) * split)
-    trainingSet = array[:training_len]
-    testSet = array[training_len:]
-    return trainingSet, testSet
+    training_set = array[:training_len]
+    test_set = array[training_len:]
+    return training_set, test_set
 
 
-def getPredictionSkLearn(trainingSet, testSet, k, attributes):
+# Find the k nearest neighbors using KNeighborsClassifier and then find the accuracy
+def get_prediction(training_set, test_set, k, attributes):
     model = KNeighborsClassifier(n_neighbors=k)
-    trainingData = np.array(trainingSet)
-    trainingX = trainingData[:, 0:attributes]
-    trainingY = trainingData[:, attributes]
-    model.fit(trainingX, trainingY)
+    training_data = np.array(training_set)
+    training_x = training_data[:, 0:attributes]
+    training_y = training_data[:, attributes]
+    model.fit(training_x, training_y)
 
-    testData = np.array(testSet)
-    testX = testData[:, 0:attributes]
-    testY = testData[:, attributes]
-    predictions = model.predict(testX)
-    accuracy = metrics.accuracy_score(testY, predictions)
+    test_data = np.array(test_set)
+    test_x = test_data[:, 0:attributes]
+    test_y = test_data[:, attributes]
+    predictions = model.predict(test_x)
+    accuracy = metrics.accuracy_score(test_y, predictions)
     return predictions, accuracy
 
 
+# Main function to run the program and create a line graph
 def main():
     url = 'https://raw.githubusercontent.com/ruiwu1990/CSCI_4120/master/KNN/iris.data'
     split = 0.67
-    trainingSet, testSet = loadDataset(url, split)
+    training_set, test_set = load_dataset(url, split)
     accuracies = {}
     for r in range(5):
         for k in range(1, 21):
-            predictions, accuracy = getPredictionSkLearn(trainingSet, testSet, k, 4)
+            predictions, accuracy = get_prediction(
+                training_set, test_set, k, 4)
             if k not in accuracies.keys():
                 accuracies[k] = []
             accuracies[k].append(accuracy)
-    averageAccuracies = {}
+    average_accuracies = {}
     for a in accuracies.keys():
-        averageAccuracies[a] = sum(accuracies[a]) / len(accuracies[a])
+        average_accuracies[a] = sum(accuracies[a]) / len(accuracies[a])
 
-    x = averageAccuracies.keys()
-    y = averageAccuracies.values()
-    plt.plot(x, y)
+    x = average_accuracies.keys()
+    y = average_accuracies.values()
+    plt.plot(x, y, color='green')
     xint = range(min(x), math.ceil(max(x)) + 1)
-    plt.xticks(xint)
-    plt.title('K Neighbors vs Average Accuracy')
-    plt.xlabel('K Neighbors')
-    plt.ylabel('Average Accuracy')
+    plt.xticks(xint, color='red')
+    plt.title('K Neighbors vs Average Accuracy', color='blue')
+    plt.xlabel('K Neighbors', color='blue')
+    plt.ylabel('Average Accuracy', color='blue')
     plt.show()
+
 
 main()
