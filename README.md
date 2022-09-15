@@ -19,7 +19,7 @@ ___
 ---
 1. Clone the repo
 2. Then cd to the directory where you cloned the repo
-3. Run python main.py
+3. Run python knn.py
 4. A window with a line plot should appear
 
 # End Results
