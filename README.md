@@ -28,4 +28,5 @@ ___
 From our testing, the Ks in the beginning are more accurate typically and they become less accurate as they near 20. Here is a picture of a line plot's average Ks through 5 runs.
 
 
-![Figure_1](https://user-images.githubusercontent.com/94388598/190424100-aa49b92e-1185-41c1-b2ad-823bc8035fe9.png)
+<img width="1430" alt="KNN Average" src="https://user-images.githubusercontent.com/94388598/190517945-c4219110-b1bb-429a-870c-5b8ee7700a33.png">
+
