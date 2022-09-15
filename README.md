@@ -22,7 +22,7 @@ ___
 5. A window with a line plot should appear
 
 # End Results
-From our testing, the K's are pretty random until around 14 through 19 they become about 0.967. Here is a picture of our line plot's average Ks through 5 runs.
+From our testing, the K's are pretty random until around 14 through 19 they become about 0.967. Here is a picture of our line plot's average Ks through 5 runs. The most accurate K's are 6-7 and 10-12.
 
 
 <img width="1430" alt="KNN Average" src="https://user-images.githubusercontent.com/94388598/190517945-c4219110-b1bb-429a-870c-5b8ee7700a33.png">
