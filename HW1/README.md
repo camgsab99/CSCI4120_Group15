@@ -17,7 +17,7 @@ ___
 ---
 1. Clone the repo
 2. Open a terminal to access the folder and run the file
-3. Then cd to the *KNN* folder inside of *CSCI4120_Group15* where you cloned the repo
+3. Then cd to the *HW1* folder inside of *CSCI4120_Group15* where you cloned the repo
 4. Run python knn.py in the terminal
 5. A window with a line plot should appear
 
