@@ -21,9 +21,17 @@ ___
 2. Open a terminal to access the folder and run the file
 3. Then cd to the *HW2* folder inside of *CSCI4120_Group15* where you cloned the repo
 4. Run python kmeans.py in the terminal
+<<<<<<< HEAD
 5. A window with a scatter plot to predict most accurate k should appear with four areas. When you're ready, close this window and another graph will show the K Elbow Visualizer that confirms k = 4 is the best.
+=======
+5. A window with a the plot to predict most accurate k should appear and an output of the accuracy of the model
+>>>>>>> d3e326c0ee6836e9fdef0294dd20437911a04696
 6. When you're ready, close that window and a confusion matrix should now appear. The accuracy will output in the terminal.
 ___
 # Results
 For our program, we found that k = 4 is the best. The accuracy of our k was 100.0%.
+<<<<<<< HEAD
 ![KAccuracy](https://user-images.githubusercontent.com/94388598/192368297-01b354b4-5a15-4c9d-9c05-43f07432088e.png)
+=======
+![KAccuracy](https://user-images.githubusercontent.com/94388598/192368297-01b354b4-5a15-4c9d-9c05-43f07432088e.png)
+>>>>>>> d3e326c0ee6836e9fdef0294dd20437911a04696
