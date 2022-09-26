@@ -13,6 +13,10 @@ from scipy.stats import mode
 X, y_true = make_blobs(n_samples=300, centers=4,
                        cluster_std=0.60, random_state=0)
 
+# Create a plot that shows best k
+plt.scatter(X[:, 0], X[:, 1], s=50);
+plt.show()
+
 # Find best K value for the data
 visualizer = KElbowVisualizer(KMeans(), k=(1, 20))
 visualizer.fit(X)
