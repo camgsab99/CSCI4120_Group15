@@ -23,6 +23,8 @@ ___
 1. Clone the repo
 2. Open a terminal to access the folder and run the file
 3. Then cd to the *HW3* folder inside of *CSCI4120_Group15* where you cloned the repo
+4. Run 'jupyter notebook' and then click on the folder with the file in it
+5. Run the notebook by clicking 'run'
 
 # Results
 
