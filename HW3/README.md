@@ -27,4 +27,10 @@ ___
 5. Run the notebook by clicking 'run'
 
 # Results
+The 1st Exercise gave us this graph:
+<img width="870" alt="Screen Shot 2022-10-09 at 2 04 06 PM" src="https://user-images.githubusercontent.com/94388598/194773205-0dbbce8c-c7f1-484c-8ca8-661a74f48e67.png">
+
+The 2nd Exercise gave us this graph:
+<img width="919" alt="Screen Shot 2022-10-09 at 2 03 52 PM" src="https://user-images.githubusercontent.com/94388598/194773185-f2063714-9ee5-473f-847e-7e2f986f4489.png">
+
 
