@@ -7,14 +7,17 @@ ___
 
 # Dependencies
 ___
-- Python >= 3.5
-- matplotlib
-- numpy
-- random
-- sklearn
-- seaborn
-- scipy
-- yellowbrick
+- Python (>= 3.5)
+ - Jupyter
+ - Juptyer Notebooks
+ - yellowbrick
+ - seaborn
+ - pandas
+ - random
+ - math
+ - numpy
+ - sklearn
+ - matplotlib
 ___
 # How to Run
 1. Clone the repo
