@@ -6,7 +6,6 @@ ___
 - Cameron Sabiston - sabistonc20@students.ecu.edu
 ## Dependencies
 ---
-The following dependencies and packages are required to be installed on the host machine in order to run the script:
  - Python (>= 3.5)
  - Jupyter
  - Juptyer Notebook
